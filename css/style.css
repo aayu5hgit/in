@@ -1414,6 +1414,7 @@ a:hover {
 
 .sinse-box {
   background-color: #e7a624;
+  opacity: 90%;
   padding: 1rem 2rem;
   position: absolute;
   left: 15px;
@@ -1889,7 +1890,7 @@ footer .credits {
   }
 
   .card-header-a .card-title-a {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .card-info .card-info-title {
@@ -2023,4 +2024,8 @@ footer .credits {
   .box-collapse .title-box-d .title-d {
     font-size: 1.3rem;
   }
+}
+
+html{
+  scroll-behavior: smooth;
 }
