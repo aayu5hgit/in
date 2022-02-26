@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
     else var str = $(this).serialize();
     var action = $(this).attr('action');
     if( ! action ) {
-      action = 'contactform/contactform.php';
+      action = 'https://sheetdb.io/api/v1/f2tg2t5gc3cux';
     }
     $.ajax({
       type: "POST",
@@ -115,4 +115,17 @@ jQuery(document).ready(function($) {
     return false;
   });
 
+});
+var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+        // you can put any JS code here
+        alert('Thank you, We have recieved your response.')
+    });
 });
