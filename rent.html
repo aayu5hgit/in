@@ -8,15 +8,16 @@
    <title>Rent</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link href="//cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="//cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" />
+   <link href="//cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" />
 </head>
 <style>
    body {
-      background-color: #91ced4;
+      background-color: #dfdfdf;
    }
 
    body * {
       box-sizing: border-box;
+
    }
 
    .header {
@@ -29,7 +30,7 @@
    }
 
    img {
-      border-radius: 50%;
+      border-radius: 6%;
       height: 60px;
       width: 60px;
    }
@@ -72,10 +73,12 @@
 
    table tr:nth-child(2n) {
       background-color: white;
+      width: 113%;
    }
 
    table tr:nth-child(2n+1) {
       background-color: #edf7f8;
+      width: 113%;
    }
 
    @media screen and (max-width: 700px) {
@@ -136,26 +139,37 @@
    }
 
    @media screen and (max-width: 500px) {
+      .link-a {
+         font-size: .9rem;
+      }
+
+      .link-a span {
+         font-size: 1.5rem;
+      }
+
       .header {
-         background-color: transparent;
-         color: #ff2424;
+         background-color: #03102cd1;
+         border-radius: 10px;
+         color: #e1d9ca;
          font-size: 23px;
          font-weight: 700;
          padding: 0;
-         text-shadow: 2px 2px 0 rgb(0 0 0 / 10%);
+         text-shadow: 3px 1px 0 rgb(188 195 37 / 20%);
       }
 
       img {
          border: 3px solid;
          border-color: #daeff1;
-         height: 100px;
-         margin: 0.5rem 0;
-         width: 100px;
+         height: 260px;
+         margin: 0.5rem 0px;
+         width: 260px;
+         /* margin-left: -38%; */
       }
 
+
       td:first-child {
-         background-color: #c8e7ea;
-         border-bottom: 1px solid #91ced4;
+         background-color: #ecf6f9a1;
+         border-bottom: 1px solid #d3d3d3;
          border-radius: 10px 10px 0 0;
          position: relative;
          top: 0;
@@ -181,10 +195,10 @@
 
       tr {
          background-color: white !important;
-         border: 1px solid #6cbec6;
+         border: 1px solid #97aeb1;
          border-radius: 10px;
-         box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-         margin: 0.5rem 0;
+         box-shadow: 2px 2px 0 rgb(0 0 0 / 10%);
+         margin: 2.5rem 0;
          padding: 0;
       }
 
@@ -194,27 +208,46 @@
          overflow: visible;
       }
    }
-   .e-btn.e-link, .e-css.e-btn.e-link {
-        background-color: #0a9572c4;
-    border-color: black;
-    border-radius: 66%;
-    box-shadow: none;
-    position: fixed;
-    left: 1%;
-    top: 81%;
-    z-index: 200;
-    color: #000000;
-}
+
+   .e-btn.e-link,
+   .e-css.e-btn.e-link {
+      background-color: #e14949;
+      border-color: black;
+      border-radius: 66%;
+      box-shadow: none;
+      position: fixed;
+      left: 1%;
+      top: 81%;
+      z-index: 200;
+      color: #000000;
+   }
+
+   .link-a {
+      color: #000000;
+      text-decoration: none;
+   }
+
+   .link-a:hover {
+      color: #979797;
+      text-decoration: none;
+   }
+
+   .link-a span {
+      font-size: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+   }
 </style>
 
 <body>
    <div>
       <a class="sf-icon-telephone e-btn e-link" href="tel:9324535317">
-          <i style="font-size:40px" class="fa">&#xf095;</i>
+         <i style="font-size:40px" class="fa">&#xf095;</i>
       </a>
    </div>
+
    <div class="table-users">
-      <div class="header">PROPERTIES</div>
+      <div class="header"> RENT PROPERTIES</div>
 
       <table cellspacing="0">
          <tr>
@@ -223,6 +256,7 @@
             <th>LOCALITY</th>
             <th>AVAILABILITY</th>
             <th width="230">TYPE</th>
+            <th>CONTACT</th>
          </tr>
 
          <tr>
@@ -231,6 +265,10 @@
             <td>Kharghar (Sector-06)</td>
             <td>SHOP</td>
             <td></td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/shahArcade.jfif" alt="" /></td>
@@ -238,6 +276,10 @@
             <td>Kharghar (Sector-06)</td>
             <td>FLAT & SHOP</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/saiSakshaat.jpg" alt="" /></td>
@@ -245,6 +287,10 @@
             <td>Kharghar (Sector-06)</td>
             <td>FLAT</td>
             <td>3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/bhagwatiGreens.jpeg" alt="" /></td>
@@ -252,6 +298,10 @@
             <td>Kharghar (Sector-20)</td>
             <td>FLAT</td>
             <td>2/3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/regencyCrest.jpg" alt="" /></td>
@@ -259,6 +309,10 @@
             <td>Kharghar (Sector-19)</td>
             <td>FLAT</td>
             <td>2/3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/payalHeights.jfif" alt="" /></td>
@@ -266,6 +320,10 @@
             <td>Kharghar (Sector-19)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/kesarSymphony.jpg" alt="" /></td>
@@ -273,6 +331,10 @@
             <td>Kharghar (Sector-19)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/windsorHeights.jpg" alt="" /></td>
@@ -280,6 +342,10 @@
             <td>Kharghar (Sector-19)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/kesarGarden.jpg" alt="" /></td>
@@ -287,6 +353,10 @@
             <td>Kharghar (Sector-20)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/girirajHor.png" alt="" /></td>
@@ -294,6 +364,10 @@
             <td>Kharghar (Sector-20)</td>
             <td>FLAT</td>
             <td>3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/saiMoksh.jfif" alt="" /></td>
@@ -301,6 +375,10 @@
             <td>Kharghar (Sector-15)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/goodwillPar.jpeg" alt="" /></td>
@@ -308,6 +386,11 @@
             <td>Kharghar (Sector-15)</td>
             <td>FLAT</td>
             <td>2/3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
+
          </tr>
          <tr>
             <td><img src="img/saiMannat.jpg" alt="" /></td>
@@ -315,6 +398,10 @@
             <td>Kharghar (Sector-34)</td>
             <td>FLAT</td>
             <td>2/3 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+                  <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+                  <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
          <tr>
             <td><img src="img/rosewoods.jpg" alt="" /></td>
@@ -322,6 +409,10 @@
             <td>Kharghar (Sector-35)</td>
             <td>FLAT</td>
             <td>2 BHK</td>
+            <td><a href="tel:9320665999" class="link-a">
+               <span class="fa fa-phone-square " style="font-size: 35px; width: 20%;"></span>
+               <span class="fa fa-whatsapp" style="font-size: 35px; width: 20%; color: #449b3f;"></span>
+               </a></td>
          </tr>
       </table>
    </div>
