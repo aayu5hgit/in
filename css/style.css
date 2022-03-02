@@ -2065,7 +2065,7 @@ footer .credits {
 .bts-popup-container {
   position: relative;
   width: 90%;
-  max-width: 481px;
+  /* max-width: 481px; */
   height: 510px;
   margin: 9em auto;
   background: #fffffffa;
