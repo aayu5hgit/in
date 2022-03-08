@@ -15,6 +15,14 @@
       background-color: #dfdfdf;
    }
 
+   /* body :(#unblurred) {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);    
+} */
+
    body * {
       box-sizing: border-box;
 
@@ -245,9 +253,124 @@
     content: "\f098";
     color: #52acb5;
 }
+
+
+.popup {
+  background-color: #327980;
+    width: 448px;
+    padding: 29px 40px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 28%;
+    font-family: 'Noto Sans', sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 99;
+    box-shadow: 0px 0px 10px #cda636;
+}
+
+.popup button {
+  display: block;
+    margin: 104px 0 145px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+
 </style>
 
 <body>
+   
+   <div class="popup">
+     
+      <button id="close">&times;</button>
+      <img src="img/360logonew.png" alt="" class="logo" style="     width: 20%;
+      margin-top: -40%;
+      position: absolute;
+      height: 14%;
+      margin-left: -9%;">
+      <h2 style="margin-top: -23%;
+       margin-left: 0;
+       font-size: 19px;
+       color: white;">Register to avail great offers!</h2>
+      <p>
+      <form action="https://sheetdb.io/api/v1/c7umne4klh82w" method="POST" id="sheetdb-form">
+         <div class="form_pop">
+            <input type="text" name="data[name]" placeholder="Enter your Name*"
+               style="height: 2.3rem;
+               margin: 10px;
+               border: 2px solid #00000030;
+               border-radius: 5px;
+               margin-left: 3%;" required>
+         </div>
+         <div class="form_pop">
+            <input type="text" name="data[contact]" placeholder="Enter your contact number*"
+               style="height: 2.3rem;
+               margin: 10px;
+               border: 2px solid #00000030;
+               border-radius: 5px;
+               margin-left: 3%;" required>
+         </div>
+         <div class="form_pop">
+            <input type="email" name="data[email]" placeholder="Enter your Email Id"
+               style="height: 2.3rem;
+               margin: 10px;
+               border: 2px solid #00000030;
+               border-radius: 5px;
+               margin-left: 3%;">
+         </div>
+         </p>
+         <input type="submit" value="SUBMIT" class="popbtn" style="border-radius: 11px;
+         background-color: #878787;
+         padding: 3px 13px 4px;
+         color: white;
+         box-shadow: 0px 0px 8px black;">
+   </div>
+
+   
+   <script>
+      var form = document.getElementById('sheetdb-form');
+      form.addEventListener("submit", e => {
+         e.preventDefault();
+         fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+         }).then(
+            response => response.json()
+         ).then((html) => {
+            // you can put any JS code here
+            alert('Thank you, We have recieved your response & will reach you soon.')
+         });
+      });
+   
+      window.addEventListener("load", function () {
+               setTimeout(
+                   function open(event) {
+                       document.querySelector(".popup").style.display = "block";
+                   },
+                   1000
+               )
+           });
+           document.querySelector("#close").addEventListener("click", function () {
+               document.querySelector(".popup").style.display = "none";
+           });
+   
+   </script>
+   
+
    <div>
       <a class="sf-icon-telephone e-btn e-link" href="tel:9324535317">
          <i style="font-size:40px" class="fa">&#xf095;</i>
