@@ -627,6 +627,10 @@ a:hover {
   padding-top: 19px;
   padding-bottom: 19px;
 }
+.navbar-default img{
+  min-width: 15%;
+  max-width: 18%;
+}
 
 .navbar-default.navbar-reduce .nav-link {
   color: #000000;
