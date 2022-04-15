@@ -627,7 +627,7 @@ a:hover {
   padding-top: 19px;
   padding-bottom: 19px;
 }
-.navbar-default img{
+.navbar-reduce img{
   min-width: 15%;
   max-width: 18%;
 }
