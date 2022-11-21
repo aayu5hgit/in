@@ -130,22 +130,6 @@
 		}
 	});
 
-	/*--/ Testimonials owl /--*/
-	$('#testimonial-carousel').owlCarousel({
-		margin: 0,
-		autoplay: true,
-		nav: true,
-		animateOut: 'fadeOut',
-		animateIn: 'fadeInUp',
-		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-		autoplayTimeout: 4000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1,
-			}
-		}
-	});
 
 })(jQuery);
 jQuery(document).ready(function ($) {
